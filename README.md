@@ -39,3 +39,19 @@ npm run build
 - Environment Variable: `VITE_PUBLIC_SITE_URL=https://<your-domain>`
 
 ローカルでは `.env.example` をコピーして `.env.local` を作っても運用できます。
+
+## 公開後の最終確認
+
+1. トップページが表示される
+2. 入力フォームからブリーフ本文が生成される
+3. 「コピー」ボタンで生成結果をクリップボードへコピーできる
+4. `https://<your-domain>/robots.txt` が本番ドメインを返す
+5. `https://<your-domain>/sitemap.xml` が本番ドメインを返す
+6. title と meta description が意図どおりに出ている
+
+## Vercel 側の設定メモ
+
+- Framework Preset: Vite
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Environment Variable: `VITE_PUBLIC_SITE_URL`
