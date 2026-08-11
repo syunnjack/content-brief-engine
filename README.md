@@ -22,3 +22,12 @@ npm run dev
 npm run lint
 npm run build
 ```
+
+## 公開URL
+
+本番URLが決まっている場合は、ビルド前に `VITE_PUBLIC_SITE_URL` を設定すると `public/robots.txt` と `public/sitemap.xml` がそのURLで生成されます。
+
+```bash
+set VITE_PUBLIC_SITE_URL=https://example.com
+npm run build
+```
