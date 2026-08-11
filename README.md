@@ -31,3 +31,11 @@ npm run build
 set VITE_PUBLIC_SITE_URL=https://example.com
 npm run build
 ```
+
+## Vercel デプロイ
+
+`vercel.json` で Vite の出力先を `dist` に固定しています。Vercel 側では次の1点だけ設定すれば公開できます。
+
+- Environment Variable: `VITE_PUBLIC_SITE_URL=https://<your-domain>`
+
+ローカルでは `.env.example` をコピーして `.env.local` を作っても運用できます。
