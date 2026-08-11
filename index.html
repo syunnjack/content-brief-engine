@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Brief Engine</title>
+    <meta
+      name="description"
+      content="SEO記事・LP・SNS投稿向けに、目的・読者・検索意図からコンテンツブリーフを素早く作る静的Webアプリ。"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="hero">
+        <p class="eyebrow">Content Operations</p>
+        <h1>Content Brief Engine</h1>
+        <p class="lede">
+          テーマ、読者、検索意図、CTAを入力すると、企画会議ですぐ使えるブリーフを生成します。
+        </p>
+      </header>
+
+      <main class="grid">
+        <section class="panel form-panel">
+          <h2>入力</h2>
+          <form id="brief-form">
+            <label>
+              テーマ
+              <input name="topic" placeholder="例: 中古マンション売却の準備" required />
+            </label>
+            <label>
+              主要読者
+              <input name="audience" placeholder="例: 30代の共働き夫婦" required />
+            </label>
+            <label>
+              コンテンツ目的
+              <select name="goal">
+                <option>リード獲得</option>
+                <option>検索流入拡大</option>
+                <option>比較検討の後押し</option>
+                <option>既存顧客の継続利用</option>
+              </select>
+            </label>
+            <label>
+              配信チャネル
+              <select name="channel">
+                <option>SEO記事</option>
+                <option>LP</option>
+                <option>メルマガ</option>
+                <option>SNS投稿</option>
+              </select>
+            </label>
+            <label>
+              検索意図・悩み
+              <textarea name="intent" rows="4" placeholder="例: 何から着手すべきか分からない。費用や必要書類が不安。" required></textarea>
+            </label>
+            <label>
+              CTA
+              <input name="cta" placeholder="例: 査定依頼フォーム送信" required />
+            </label>
+            <button type="submit">ブリーフを生成</button>
+          </form>
+        </section>
+
+        <section class="panel result-panel">
+          <div class="result-header">
+            <h2>生成結果</h2>
+            <button id="copy-button" type="button">コピー</button>
+          </div>
+          <pre id="result">ここにブリーフが表示されます。</pre>
+        </section>
+      </main>
+
+      <section class="panel tips-panel">
+        <h2>このツールで出せるもの</h2>
+        <ul>
+          <li>想定読者と検索意図の整理</li>
+          <li>見出し案と必須要素の洗い出し</li>
+          <li>CTAと成果指標の初期ドラフト</li>
+        </ul>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
